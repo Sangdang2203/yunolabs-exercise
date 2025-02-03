@@ -38,8 +38,65 @@ export const concerns_photos = [
 export const navLinks = [
   { id: 1, title: "home", href: "/" },
   { id: 2, title: "blog", href: "/blog" },
-  { id: 3, title: "concerns", href: "/concerns" },
+  { id: 3, title: "concerns", href: "#concerns" },
   { id: 4, title: "treatments", href: "/treatments" },
   { id: 5, title: "shop", href: "/shop" },
   { id: 6, title: "locate us", href: "/locate-us" },
+];
+
+export const contents = [
+  {
+    id: 1,
+    title: "Name Surname",
+    position: "Position, Company name",
+    content: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique. Duis cursus,
+              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
+              libero."`,
+  },
+  {
+    id: 2,
+    title: "Name Surname",
+    position: "Position, Company name",
+    content: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique. Duis cursus,
+              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
+              libero."`,
+  },
+  {
+    id: 3,
+    title: "Name Surname",
+    position: "Position, Company name",
+    content: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique. Duis cursus,
+              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
+              libero."`,
+  },
+  {
+    id: 4,
+    title: "Name Surname",
+    position: "Position, Company name",
+    content: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique. Duis cursus,
+              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
+              libero."`,
+  },
+  {
+    id: 5,
+    title: "Name Surname",
+    position: "Position, Company name",
+    content: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique. Duis cursus,
+              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
+              libero."`,
+  },
+  {
+    id: 6,
+    title: "Name Surname",
+    position: "Position, Company name",
+    content: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique. Duis cursus,
+              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
+              libero."`,
+  },
 ];

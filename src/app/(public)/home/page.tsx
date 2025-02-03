@@ -67,7 +67,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="w-full max-h-[1144px] py-[112px] px-[64px]">
+      <section
+        id="concerns"
+        className="w-full max-h-[1144px] py-[112px] px-[64px]"
+      >
         <h1 className="text-[64px] font-medium leading-[76.8px]">Concerns</h1>
         <p className="text-[18px] leading-[27px] font-normal">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.

@@ -21,7 +21,7 @@ export default function UpIcon() {
     requestAnimationFrame(scrollStep);
   }
   return (
-    <IconButton onClick={() => scrollToTop(200)}>
+    <IconButton onClick={() => scrollToTop(200)} title="Back To Top">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="32"

@@ -5,10 +5,10 @@ import logo from "@/images/footer_logo.png";
 import Link from "next/link";
 import { navLinks } from "../assets/data";
 import UpIcon from "../assets/icons/UpIcon";
-import FacebookIcon from "../assets/icons/Facebook";
 import TiktokIcon from "../assets/icons/TikTok";
-import YoutubeIcon from "../assets/icons/Youtube";
 import InstagramIcon from "../assets/icons/Instagram";
+import YoutubeIconFooter from "../assets/icons/YoutubeFooter";
+import FacebookIconFooter from "../assets/icons/FacebookFooter";
 
 export default function TheFooterComponent() {
   return (
@@ -31,13 +31,13 @@ export default function TheFooterComponent() {
               })}
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 relative">
           <div className="w-[164px] h-[29px]">
             <div>
               <p className="uppercase">Contact us</p>
               <Link
                 href="tel:+02 8006 3344"
-                className="leadind-[28.8px] text-[24px] font-medium"
+                className="leadind-[28.8px] text-sm md:text-[18px] font-medium py-3"
               >
                 +02 8006 3344
               </Link>
@@ -46,7 +46,7 @@ export default function TheFooterComponent() {
               <p className="uppercase">Email</p>
               <Link
                 href="mailto:robert@cosmedixclinics.com.au"
-                className="leadind-[28.8px] text-[24px] font-medium"
+                className="leadind-[28.8px] text-sm md:text-[18px] font-medium py-3"
               >
                 robert@cosmedixclinics.com.au
               </Link>
@@ -55,26 +55,40 @@ export default function TheFooterComponent() {
           <div className="w-[164px] h-[29px]">
             <div>
               <p className="uppercase">address</p>
-              <Link href="mailto:robert@cosmedixclinics.com.au">
+              <Link
+                href="mailto:robert@cosmedixclinics.com.au"
+                className="text-sm md:text-[18px]"
+              >
                 169 William Street - Darlinghurst Sydney, NSW
               </Link>
             </div>
             <div className="mt-10">
               <p className="uppercase">Opening hours</p>
-              <p className="leadind-[28.8px] text-[24px] font-medium">
+              <p className="leadind-[28.8px] text-sm md:text-[18px] font-medium py-3">
                 9am—6pm
               </p>
             </div>
-            <div className="flex justify-between items-center">
-              <FacebookIcon />
-              <InstagramIcon />
-              <TiktokIcon />
-              <YoutubeIcon />
+            <div className="flex justify-between items-center mt-10">
+              <Link href="">
+                <FacebookIconFooter />
+              </Link>
+              <Link href="">
+                <InstagramIcon />
+              </Link>
+              <Link href="">
+                <TiktokIcon />
+              </Link>
+              <Link href="">
+                <YoutubeIconFooter />
+              </Link>
             </div>
           </div>
-          <div className="" title="Go to top">
+          <div
+            className="absolute flex flex-col justify-between right-0 bottom-4 min-w-[113px] min-h-[248px]"
+            title="Go to top"
+          >
             <UpIcon />
-            <p className="leading-[13px] text-[10px] text-[#FBF8F3]">
+            <p className="leading-[13px] text-[10px] text-[#FBF8F3] uppercase">
               © 2024 — Copyright
             </p>
           </div>

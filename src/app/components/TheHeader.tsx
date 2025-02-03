@@ -8,6 +8,10 @@ import Image from "next/image";
 import CloseIcon from "../assets/icons/CloseIcon";
 import MenuIcon from "../assets/icons/MenuIcon";
 import { navLinks } from "../assets/data";
+import FacebookIcon from "../assets/icons/Facebook";
+import InstagramIcon from "../assets/icons/Instagram";
+import TiktokIcon from "../assets/icons/TikTok";
+import YoutubeIcon from "../assets/icons/Youtube";
 
 const TheHeaderComponent = () => {
   const [navigation, setNavigation] = React.useState(false);
@@ -105,6 +109,20 @@ const TheHeaderComponent = () => {
                 );
               })}
           </div>
+        </div>
+        <div className="w-full flex justify-end items-end bottom-0 right-0 bg-white py-2">
+          <Link href="" className="mx-2">
+            <FacebookIcon />
+          </Link>
+          <Link href="" className="mx-2">
+            <InstagramIcon />
+          </Link>
+          <Link href="" className="mx-2">
+            <TiktokIcon />
+          </Link>
+          <Link href="" className="mx-2">
+            <YoutubeIcon />
+          </Link>
         </div>
       </div>
     </nav>

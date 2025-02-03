@@ -16,16 +16,16 @@ const TheHeaderComponent = () => {
     setNavigation(!navigation);
   };
 
+  const closeNavigation = () => {
+    setNavigation(false);
+  };
+
   return (
     <nav className="w-full h-[100px] px-[64px] fixed top-0 left-0 z-30 bg-white shadow-lg">
       <div className="flex justify-between items-center">
-        <div>
-          <Image
-            src={logo}
-            alt="logo"
-            className="w-[197.83px] h-[50px]"
-          ></Image>
-        </div>
+        <Link href="/">
+          <Image src={logo} alt="logo" className="w-[197.83px] h-[50px]" />
+        </Link>
         <div className="z-50 flex items-center" onClick={handleNavigation}>
           {navigation ? (
             <div className="w-[35.36px] h-[85.71px] hover:opacity-80 cursor-pointer z-50">
@@ -73,6 +73,7 @@ const TheHeaderComponent = () => {
                     key={link.id}
                     href={link.href}
                     className="text-[#7D614B] w-[315px] h-[77px]"
+                    onClick={closeNavigation}
                   >
                     <Typography
                       variant="body1"
@@ -92,6 +93,7 @@ const TheHeaderComponent = () => {
                     key={link.id}
                     href={link.href}
                     className="text-[#7D614B] w-[315px] h-[77px] "
+                    onClick={closeNavigation}
                   >
                     <Typography
                       variant="body1"

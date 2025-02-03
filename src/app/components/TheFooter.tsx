@@ -16,9 +16,9 @@ const navLinks = [
 
 export default function TheFooterComponent() {
   return (
-    <div className="p-4 h-auto w-full text-white bg-slate-900">
+    <div className="px-[64px] py-[60px] h-auto w-full text-white bg-slate-900">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-2">
-        <div className="flex flex-col  justify-start items-start">
+        <div className="flex flex-col justify-start items-start w-[454.45px] h-[248px]">
           <Image src={logo} alt="logo" className="w-[364px] h-[94px]"></Image>
           <div className="mt-10">
             <div className="flex justify-start items-center">
@@ -54,6 +54,10 @@ export default function TheFooterComponent() {
                 })}
             </div>
           </div>
+        </div>
+        <div className="w-[164px] h-[29px]">
+          <p>Contact us</p>
+          <Link href="tel:+02 8006 3344">+02 8006 3344</Link>
         </div>
 
         <div className="md:flex flex-col justify-start items-center"></div>

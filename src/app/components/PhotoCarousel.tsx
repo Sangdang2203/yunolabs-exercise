@@ -4,6 +4,7 @@ import { concerns_photos } from "../assets/data";
 import React, { useEffect, useState } from "react";
 import PreviousIcon from "../assets/icons/PreviousIcon";
 import NextIcon from "../assets/icons/NextIcon";
+import { IconButton } from "@mui/material";
 
 export default function PhotosCarouselComponent() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -49,7 +50,7 @@ export default function PhotosCarouselComponent() {
             return (
               <div
                 key={photo.id}
-                className="relative rounded-[28px] border-0 flex flex-col justify-center items-center"
+                className="relative lg:min-h-[616px] rounded-[28px] border-0 flex flex-col justify-center items-center"
               >
                 <Image
                   src={photo.photo}
@@ -70,9 +71,9 @@ export default function PhotosCarouselComponent() {
           className="z-0 mx-2"
           onClick={prevSlide}
         >
-          <span title="Previous">
+          <IconButton title="Previous">
             <PreviousIcon />
-          </span>
+          </IconButton>
         </button>
 
         <button
@@ -81,9 +82,9 @@ export default function PhotosCarouselComponent() {
           className="z-0 mx-2"
           onClick={nextSlide}
         >
-          <span title="Next">
+          <IconButton title="Next">
             <NextIcon />
-          </span>
+          </IconButton>
         </button>
       </div>
     </div>

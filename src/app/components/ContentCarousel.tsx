@@ -4,6 +4,7 @@ import React from "react";
 import PreviousIcon from "../assets/icons/PreviousIcon";
 import NextIcon from "../assets/icons/NextIcon";
 import { contents } from "../assets/data";
+import { IconButton } from "@mui/material";
 
 export default function ContentCarouselComponent() {
   const [currentIndex, setCurrentIndex] = React.useState(0);
@@ -38,7 +39,7 @@ export default function ContentCarouselComponent() {
 
   return (
     <div>
-      <div className="max-w-[802px] max-h-[77px]">
+      <div className="max-w-[802px] min-h-[77px]">
         <p className="text-[28px] md:text-[48px] text-center lg:text-[64px] text-[#6B6356] font-medium leading-[76.8px] z-30">
           Don’t just take our word for it
         </p>
@@ -51,9 +52,9 @@ export default function ContentCarouselComponent() {
           className="z-0 mx-2 md:mx-10"
           onClick={prevSlide}
         >
-          <span title="Previous">
+          <IconButton title="Previous">
             <PreviousIcon />
-          </span>
+          </IconButton>
         </button>
 
         <div className="max-w-[1312px] max-h-[245px] grid grid-cols-1 md:grid-cols-2 gap-[32px]">
@@ -86,9 +87,9 @@ export default function ContentCarouselComponent() {
           className="z-0 mx-2 md:mx-10"
           onClick={nextSlide}
         >
-          <span title="Next">
+          <IconButton title="Next">
             <NextIcon />
-          </span>
+          </IconButton>
         </button>
       </div>
     </div>

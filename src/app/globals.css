@@ -13,14 +13,15 @@
     --foreground: #ededed;
   }
 }
+html{scroll-behavior: smooth }
+
+*{
+  font-family: "PP Neue Montreal";
+}
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "PP Neue Montreal";
-}
-
-*{
   font-family: "PP Neue Montreal";
 }
 

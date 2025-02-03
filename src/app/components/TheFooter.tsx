@@ -9,7 +9,6 @@ import TiktokIcon from "../assets/icons/TikTok";
 import InstagramIcon from "../assets/icons/Instagram";
 import YoutubeIconFooter from "../assets/icons/YoutubeFooter";
 import FacebookIconFooter from "../assets/icons/FacebookFooter";
-import Hotline from "./Hotline";
 
 export default function TheFooterComponent() {
   return (
@@ -89,9 +88,7 @@ export default function TheFooterComponent() {
             title="Go to top"
           >
             <UpIcon />
-            <div className="fixed right-2 bottom-2 z-50 md:hidden">
-              <Hotline />
-            </div>
+
             <p className="leading-[13px] text-[10px] text-[#FBF8F3] uppercase">
               © 2024 — Copyright
             </p>

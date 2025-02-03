@@ -44,7 +44,7 @@ export default function ContentCarouselComponent() {
         </p>
       </div>
 
-      <div className="w-full max-h-[245px] flex justify-between items-center">
+      <div className="w-full max-h-[245px] flex justify-between items-center md:my-5">
         <button
           type="button"
           title="Previous"

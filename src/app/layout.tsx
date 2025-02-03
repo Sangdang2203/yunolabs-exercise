@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import TheHeaderComponent from "./components/TheHeader";
 import TheFooterComponent from "./components/TheFooter";
+import Hotline from "./components/Hotline";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,9 @@ export default function RootLayout({
         <div className="mt-[100px] min-h-screen">{children}</div>
 
         <footer>
+          <div className="fixed right-2 bottom-2 z-50 md:hidden blinking-text">
+            <Hotline />
+          </div>
           <TheFooterComponent />
         </footer>
       </body>

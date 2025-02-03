@@ -25,89 +25,72 @@ const TheHeaderComponent = () => {
   };
 
   return (
-    <nav className="w-full h-[100px] px-[64px] fixed top-0 left-0 z-30 bg-white shadow-lg">
+    <nav className="w-full h-[100px] px-3 md:px-[64px] fixed top-0 left-0 z-30 bg-white shadow-lg">
       <div className="flex justify-between items-center">
         <Link href="/">
           <Image src={logo} alt="logo" className="w-[197.83px] h-[50px]" />
         </Link>
-        <div className="z-50 flex items-center" onClick={handleNavigation}>
-          {navigation ? (
-            <div className="w-[35.36px] h-[85.71px] hover:opacity-80 cursor-pointer z-50">
-              <CloseIcon />
-            </div>
-          ) : (
-            <div className="w-[35.36px] h-[85.71px] hover:opacity-80 cursor-pointer z-50">
-              <MenuIcon />
-            </div>
-          )}
+        <div
+          className="block z-50 md:flex items-center"
+          onClick={handleNavigation}
+        >
+          <div className="block w-[35.36px] h-[85.71px] hover:opacity-80 cursor-pointer z-50">
+            {navigation ? <CloseIcon /> : <MenuIcon />}
+          </div>
         </div>
-        <div>
-          {navigation ? (
-            <button
-              type="button"
-              className="px-6 py-3 bg-[#7D614B] text-white capitalize rounded-[100px]"
-            >
-              book now
-            </button>
-          ) : (
-            <button
-              type="button"
-              className="px-6 py-3 bg-black text-white capitalize rounded-[100px]"
-            >
-              book now
-            </button>
-          )}
+        <div className="hidden md:block">
+          <button
+            type="button"
+            className={`px-6 py-3 ${
+              navigation ? "bg-[#7D614B]" : "bg-black"
+            } text-white capitalize rounded-[100px]`}
+          >
+            book now
+          </button>
         </div>
       </div>
 
-      {/* Handle the menu icon */}
       <div
-        className={
-          navigation
-            ? "block absolute top-[100px] right-0 left-0 bottom-0 bg-[#F4F4F4] w-full h-[692px] ease-in duration-300"
-            : "block absolute top-[100px] right-0 left-[-100%] bottom-0 bg-[#F4F4F4] w-full h-[692px] ease-in duration-300"
-        }
+        className={`absolute top-[100px] right-0 left-0 bottom-0 bg-[#F4F4F4] w-full h-[692px] ease-in duration-300 ${
+          navigation ? "block" : "hidden"
+        }`}
       >
-        <div className="grid grid-cols-2 md:grid-cols-5 w-[669px] h-[295px]">
+        <div className="grid grid-cols-2 md:grid-cols-5 max-w-[669px] h-[295px]">
           <div className="flex flex-col px-[64px] py-[32px]">
             {navLinks.length > 0 &&
-              navLinks.slice(0, 3).map((link) => {
-                return (
-                  <Link
-                    key={link.id}
-                    href={link.href}
-                    className="text-[#7D614B] w-[315px] h-[77px]"
-                    onClick={closeNavigation}
+              navLinks.slice(0, 3).map((link) => (
+                <Link
+                  key={link.id}
+                  href={link.href}
+                  className="text-[#7D614B] w-[315px] h-[77px]"
+                  onClick={closeNavigation}
+                >
+                  <Typography
+                    variant="body1"
+                    className="capitalize font-semibold"
                   >
-                    <Typography
-                      variant="body1"
-                      className="capitalize font-semibold"
-                    >
-                      {link.title}
-                    </Typography>
-                  </Link>
-                );
-              })}
+                    {link.title}
+                  </Typography>
+                </Link>
+              ))}
           </div>
           <div className="flex flex-col px-[64px] py-[32px]">
             {navLinks.length > 0 &&
-              navLinks.slice(3, 6).map((link) => {
-                return (
-                  <Link
-                    key={link.id}
-                    href={link.href}
-                    className="text-[#7D614B] w-[315px] h-[77px] "
-                    onClick={closeNavigation}
+              navLinks.slice(3, 6).map((link) => (
+                <Link
+                  key={link.id}
+                  href={link.href}
+                  className="text-[#7D614B] w-[315px] h-[77px]"
+                  onClick={closeNavigation}
+                >
+                  <Typography
+                    variant="body1"
+                    className="capitalize font-semibold"
                   >
-                    <Typography
-                      variant="body1"
-                      className="capitalize font-semibold"
-                    >
-                      {link.title}
-                    </Typography>
-                  </Link>
-                );
-              })}
+                    {link.title}
+                  </Typography>
+                </Link>
+              ))}
           </div>
         </div>
         <div className="w-full flex justify-end items-end bottom-0 right-0 bg-white py-2">

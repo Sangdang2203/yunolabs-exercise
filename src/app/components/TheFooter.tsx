@@ -9,21 +9,22 @@ import TiktokIcon from "../assets/icons/TikTok";
 import InstagramIcon from "../assets/icons/Instagram";
 import YoutubeIconFooter from "../assets/icons/YoutubeFooter";
 import FacebookIconFooter from "../assets/icons/FacebookFooter";
+import Hotline from "./Hotline";
 
 export default function TheFooterComponent() {
   return (
     <div className="px-[64px] py-[60px] h-auto w-full text-white bg-slate-900">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-2">
-        <div className=" w-[454.45px] h-[248px]">
+        <div className="max-w-[454.45px] max-h-[248px]">
           <Image src={logo} alt="logo" className="w-[364px] h-[94px]"></Image>
-          <div className="mt-10">
+          <div className="hidden md:block mt-10">
             {navLinks.length > 0 &&
               navLinks.map((link) => {
                 return (
                   <Link
                     key={link.id}
                     href={link.href}
-                    className="text-[#ffffff] w-[315px] h-[77px] capitalize text-[32px]"
+                    className="text-[#ffffff] w-[315px] h-[77px] capitalize text-[18px] md:text-[32px]"
                   >
                     {""} {link.title} {"/"}
                   </Link>
@@ -31,8 +32,8 @@ export default function TheFooterComponent() {
               })}
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 relative">
-          <div className="w-[164px] h-[29px]">
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 relative">
+          <div className="max-w-[164px] max-h-[29px]">
             <div>
               <p className="uppercase">Contact us</p>
               <Link
@@ -52,7 +53,7 @@ export default function TheFooterComponent() {
               </Link>
             </div>
           </div>
-          <div className="w-[164px] h-[29px]">
+          <div className="max-w-[164px] max-h-[29px]">
             <div>
               <p className="uppercase">address</p>
               <Link
@@ -88,6 +89,9 @@ export default function TheFooterComponent() {
             title="Go to top"
           >
             <UpIcon />
+            <div className="fixed right-2 bottom-2 z-50 md:hidden">
+              <Hotline />
+            </div>
             <p className="leading-[13px] text-[10px] text-[#FBF8F3] uppercase">
               © 2024 — Copyright
             </p>

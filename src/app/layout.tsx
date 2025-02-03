@@ -33,6 +33,7 @@ export default function RootLayout({
           <TheHeaderComponent />
         </header>
         <div className="mt-[100px] min-h-screen">{children}</div>
+
         <footer>
           <TheFooterComponent />
         </footer>

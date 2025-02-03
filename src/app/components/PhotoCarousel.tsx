@@ -25,14 +25,14 @@ export default function PhotosCarouselComponent() {
           return (
             <div
               key={photo.id}
-              className="relative bg-gradient-to-l from-black to-[#957963] rounded-[28px]"
+              className="relative bg-gradient-to-l from-black to-[#957963] rounded-[28px] border-0"
             >
               <Image
                 src={photo.photo}
                 alt={photo.alt}
-                className="min-h-[616px] min-w-[416px] rounded-[28px] bg-gradient-to-r from-black to-[#957963]"
+                className="min-w-[313px] min-h-[208px] md:min-h-[616px] md:min-w-[416px] rounded-[28px] bg-gradient-to-r from-black to-[#957963]"
               />
-              <p className="absolute bottom-4 left-4 right-0 text-[#F4F4F4] text-[48px] leading-[57.6px] font-normal">
+              <p className="absolute bottom-4 left-4 right-0 text-[#F4F4F4] text-[24px] md:text-[48px] leading-[57.6px] font-normal">
                 {photo.content}
               </p>
             </div>

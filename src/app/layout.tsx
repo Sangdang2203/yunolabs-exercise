@@ -33,7 +33,7 @@ export default function RootLayout({
         <header>
           <TheHeaderComponent />
         </header>
-        <div className="mt-[100px] min-h-screen">{children}</div>
+        <div className="mt-[100px] w-full min-h-screen">{children}</div>
 
         <footer>
           <div className="fixed right-2 bottom-2 z-50 md:hidden blinking-text">

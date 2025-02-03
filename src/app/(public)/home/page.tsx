@@ -7,10 +7,10 @@ import TreatmentsComponent from "@/app/components/Treatments";
 export default function HomePage() {
   return (
     <>
-      <section className="w-full h-auto md:min-h-[900px]  ">
+      <section className="w-full h-auto lg:min-h-[900px]  ">
         <div className="relative">
           <Image src={banner} alt="banner" className="w-full h-auto" />
-          <div className="hidden md:block absolute w-[856px] h-[319px] top-[524px] left-[52px]">
+          <div className="hidden lg:block absolute min-w-[856px] h-[319px] top-[524px] left-[52px]">
             <p className="text-[64px] text-[#F4F4F4] font-medium leading-[76.8px] h-[231px]">
               Unveil Your Best Self with Cosmedix Clinics’ Expert Care and
               Cutting-Edge Treatments

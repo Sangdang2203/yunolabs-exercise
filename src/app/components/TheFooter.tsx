@@ -15,8 +15,12 @@ export default function TheFooterComponent() {
     <div className="px-[64px] py-[60px] h-auto w-full text-white bg-slate-900">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-2">
         <div className="max-w-[454.45px] max-h-[248px]">
-          <Image src={logo} alt="logo" className="w-[364px] h-[94px]"></Image>
-          <div className="hidden md:block mt-10">
+          <Image
+            src={logo}
+            alt="logo"
+            className="w-[364px] h-[94px] md:mb-10"
+          ></Image>
+          <div className="hidden lg:block">
             {navLinks.length > 0 &&
               navLinks.map((link) => {
                 return (
@@ -57,7 +61,7 @@ export default function TheFooterComponent() {
               <p className="uppercase">address</p>
               <Link
                 href="mailto:robert@cosmedixclinics.com.au"
-                className="text-sm md:text-[18px]"
+                className="text-sm lg:text-[18px]"
               >
                 169 William Street - Darlinghurst Sydney, NSW
               </Link>
@@ -84,7 +88,7 @@ export default function TheFooterComponent() {
             </div>
           </div>
           <div
-            className="absolute flex flex-col justify-between right-0 bottom-4 min-w-[113px] min-h-[248px]"
+            className="absolute flex flex-col justify-between right-0 bottom-0 min-w-[113px] md:min-h-40 lg:min-h-[248px]"
             title="Go to top"
           >
             <UpIcon />

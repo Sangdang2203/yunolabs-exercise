@@ -39,7 +39,7 @@ export default function ContentCarouselComponent() {
   return (
     <div>
       <div className="max-w-[802px] max-h-[77px]">
-        <p className="text-[28px] text-center md:text-[64px] text-[#6B6356] font-medium leading-[76.8px] z-30">
+        <p className="text-[28px] md:text-[48px] text-center lg:text-[64px] text-[#6B6356] font-medium leading-[76.8px] z-30">
           Don’t just take our word for it
         </p>
       </div>
@@ -48,7 +48,7 @@ export default function ContentCarouselComponent() {
         <button
           type="button"
           title="Previous"
-          className="z-0 mx-10"
+          className="z-0 mx-2 md:mx-10"
           onClick={prevSlide}
         >
           <span title="Previous">
@@ -83,7 +83,7 @@ export default function ContentCarouselComponent() {
         <button
           type="button"
           title="Next"
-          className="z-0 mx-10"
+          className="z-0 mx-2 md:mx-10"
           onClick={nextSlide}
         >
           <span title="Next">

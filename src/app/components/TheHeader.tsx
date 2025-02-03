@@ -51,7 +51,7 @@ const TheHeaderComponent = () => {
       </div>
 
       <div
-        className={`absolute top-[100px] right-0 left-0 bottom-0 bg-[#F4F4F4] w-full h-[692px] ease-in duration-300 ${
+        className={`absolute top-[100px] right-0 left-0 bottom-0 bg-[#F4F4F4] w-full min-h-screen ease-in duration-300 ${
           navigation ? "block" : "hidden"
         }`}
       >
@@ -93,7 +93,7 @@ const TheHeaderComponent = () => {
               ))}
           </div>
         </div>
-        <div className="w-full flex justify-end items-end bottom-0 right-0 bg-white py-2">
+        <div className="w-full fixed flex justify-end items-end bottom-0 right-0 bg-white py-2">
           <Link href="" className="mx-2">
             <FacebookIcon />
           </Link>

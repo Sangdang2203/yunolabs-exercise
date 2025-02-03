@@ -32,7 +32,7 @@ export default function RootLayout({
         <header>
           <TheHeaderComponent />
         </header>
-        <div>{children}</div>
+        <div className="mt-[100px]">{children}</div>
         <footer>
           <TheFooterComponent />
         </footer>

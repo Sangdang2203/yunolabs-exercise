@@ -4,15 +4,7 @@ import Image from "next/image";
 import logo from "@/images/footer_logo.png";
 import Link from "next/link";
 import { Typography } from "@mui/material";
-
-const navLinks = [
-  { id: 1, title: "home", href: "/" },
-  { id: 2, title: "blog", href: "/blog" },
-  { id: 3, title: "concerns", href: "/concerns" },
-  { id: 4, title: "treatments", href: "/treatments" },
-  { id: 5, title: "shop", href: "/shop" },
-  { id: 6, title: "locate us", href: "/locate-us" },
-];
+import { navLinks } from "../assets/data";
 
 export default function TheFooterComponent() {
   return (

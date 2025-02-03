@@ -2,11 +2,12 @@
 
 import React from "react";
 import Link from "next/link";
-import { Button, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import logo from "@/images/logo.png";
 import Image from "next/image";
 import CloseIcon from "../assets/icons/CloseIcon";
 import MenuIcon from "../assets/icons/MenuIcon";
+import { navLinks } from "../assets/data";
 
 const TheHeaderComponent = () => {
   const [navigation, setNavigation] = React.useState(false);
@@ -14,15 +15,6 @@ const TheHeaderComponent = () => {
   const handleNavigation = () => {
     setNavigation(!navigation);
   };
-
-  const navLinks = [
-    { id: 1, title: "home", href: "/" },
-    { id: 2, title: "blog", href: "/blog" },
-    { id: 3, title: "concerns", href: "/concerns" },
-    { id: 4, title: "treatments", href: "/treatments" },
-    { id: 5, title: "shop", href: "/shop" },
-    { id: 6, title: "locate us", href: "/locate-us" },
-  ];
 
   return (
     <nav className="w-full h-[100px] px-[64px] fixed top-0 left-0 z-30 bg-white shadow-lg">
@@ -47,13 +39,19 @@ const TheHeaderComponent = () => {
         </div>
         <div>
           {navigation ? (
-            <Button className="px-6 py-3 bg-[#7D614B] text-white capitalize rounded-[100px]">
+            <button
+              type="button"
+              className="px-6 py-3 bg-[#7D614B] text-white capitalize rounded-[100px]"
+            >
               book now
-            </Button>
+            </button>
           ) : (
-            <Button className="px-6 py-3 bg-black text-white capitalize rounded-[100px]">
+            <button
+              type="button"
+              className="px-6 py-3 bg-black text-white capitalize rounded-[100px]"
+            >
               book now
-            </Button>
+            </button>
           )}
         </div>
       </div>
